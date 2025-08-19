@@ -1,12 +1,8 @@
 server:
-  port: 7575
-
-
-
-
+  port: 7070
 spring:
   application:
-    name: config-server
+    name: ms-config-server
   cloud:
     config:
       server:
@@ -14,3 +10,7 @@ spring:
           uri: https://github.com/gitaplicacionesdistribuidas-rgb/DAD-2025-2.git # ruta del repositorio git
           searchPaths: config-data
           default-label: main
+  security:
+    user:
+      name: root
+      password: 123456
