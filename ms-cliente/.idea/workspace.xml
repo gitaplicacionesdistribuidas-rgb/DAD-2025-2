@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8b60afb6-64dd-4a76-b5d5-02ccd795d39a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../ms-catalogo/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../ms-catalogo/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ms-registry-server/src/main/java/com/example/msregistryserver/MsRegistryServerApplication.java" beforeDir="false" />
-    </list>
+    <list default="true" id="8b60afb6-64dd-4a76-b5d5-02ccd795d39a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +98,7 @@
       <workItem from="1756152190287" duration="1865000" />
       <workItem from="1756157104571" duration="1965000" />
       <workItem from="1756231356732" duration="1119000" />
-      <workItem from="1756233059121" duration="1326000" />
+      <workItem from="1756233059121" duration="2604000" />
     </task>
     <servers />
   </component>
