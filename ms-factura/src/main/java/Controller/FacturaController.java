@@ -2,8 +2,7 @@ package Controller;
 
 import Entity.Factura;
 import Service.FacturaService;
-import com.example.mscatalogo.model.Factura;
-import com.example.mscatalogo.service.FacturaService;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
