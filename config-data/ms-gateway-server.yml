@@ -28,6 +28,18 @@ eureka:
     hostname: localhost
 
 
+    server:
+      port: 9090
+
+
+    eureka:
+      client:
+        serviceUrl:
+          defaultZone: http://localhost:8090/eureka
+      instance:
+        hostname: localhost
+
+
     spring:
       cloud:
         gateway:
@@ -35,6 +47,12 @@ eureka:
             locator:
               enable: true
           routes:
-            - id: ms-catalogo-service
-              uri: lb://ms-catalogo-service
+            - id: ms-catalogo
+              uri: lb://ms-catalogo
               predicates:
+                - Path=/categoria/**
+                -
+                - - id: ms-Producto
+                - uri: lb://ms-Producto
+                - predicates:
+                - Path=/categorias/**
