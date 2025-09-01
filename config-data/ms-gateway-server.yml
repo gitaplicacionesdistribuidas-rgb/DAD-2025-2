@@ -1,11 +1,10 @@
-server:
-  port: 8085
+
 spring:
   application:
-    name: ms_catalogo
+    name: ms_gateway-server
 
   datasource:
-    url: jdbc:mysql://localhost:3306/ms_catalogo
+    url: jdbc:mysql://localhost:3306/ms_gateway-server
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -27,3 +26,15 @@ eureka:
       defaultZone: http://localhost:8090/eureka
   instance:
     hostname: localhost
+
+
+    spring:
+      cloud:
+        gateway:
+          discovery:
+            locator:
+              enable: true
+          routes:
+            - id: ms-catalogo-service
+              uri: lb://ms-catalogo-service
+              predicates:
