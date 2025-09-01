@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: ms-categoria
-  profiles:
-    active: development
-  config:
-    import: configserver:http://root:123456@localhost:7071
