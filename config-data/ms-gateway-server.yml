@@ -1,25 +1,6 @@
+server:
+  port: 9090
 
-spring:
-  application:
-    name: ms_gateway-server
-
-  datasource:
-    url: jdbc:mysql://localhost:3306/ms_gateway-server
-    username: root
-    password:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-
-springdoc:
-  api-docs:
-    enabled: true
-  swagger-ui:
-    enabled: true
-    path: /doc/swagger-ui.html
 eureka:
   client:
     serviceUrl:
@@ -27,32 +8,27 @@ eureka:
   instance:
     hostname: localhost
 
+spring:
+  application:
+    name: ms-gateway-server
 
-    server:
-      port: 9090
-
-
-    eureka:
-      client:
-        serviceUrl:
-          defaultZone: http://localhost:8090/eureka
-      instance:
-        hostname: localhost
-
-
-    spring:
-      cloud:
-        gateway:
+  cloud:
+    gateway:
+      server:
+        webflux:
           discovery:
             locator:
-              enable: true
+              enabled: true
+              lower-case-service-id: true
           routes:
             - id: ms-catalogo
               uri: lb://ms-catalogo
               predicates:
                 - Path=/categoria/**
-                -
-                - - id: ms-Producto
-                - uri: lb://ms-Producto
-                - predicates:
-                - Path=/categorias/**
+                    - id: ms-producto
+                    uri: lb://ms-producto
+                    predicates:
+                      - Path=/categorias/**
+              # Si tu servicio real no expone /categoria/...:
+              # filters:
+              #   - StripPrefix=1
